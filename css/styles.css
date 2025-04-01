@@ -1,25 +1,8 @@
 @charset "UTF-8";
-.gradient-header {
-            background: linear-gradient(to right, #cce0ff, #004080);
-            color: white;
-}
-
-.text-primary {
-    color: #32a852 !important;
-}
-
-.bg-primary {
-    background-color: #32a852 !important;
-}
-
-.btn-primary {
-    background-color: #32a852 !important;
-}
-
 .animated-header {
     background: linear-gradient(270deg, #e0f2dc, #32a852);
     background-size: 400% 400%;
-    animation: gradientAnimation 48s ease infinite;
+    animation: gradientAnimation 30s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -32,4 +15,32 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+.text-primary {
+    color: #32a852 !important;
+}
+
+.bg-primary {
+    background-color: #32a852 !important;
+}
+
+.btn-primary {
+    background-color: #32a852 !important;
+    border-color: black;
+}
+
+.btn-primary:hover {
+    border-color: black;
+}
+
+
+/* Add hover animation for cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transformation */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarges the card slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow effect */
 }
