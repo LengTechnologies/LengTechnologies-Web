@@ -1,4 +1,5 @@
 // Initialize EmailJS with your public key
+// TODO inject public key
 //emailjs.init("YOUR_PUBLIC_KEY"); // Replace 'YOUR_PUBLIC_KEY' with your actual public key
 
 // Function to send email
