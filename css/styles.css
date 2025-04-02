@@ -2,7 +2,8 @@
 .linear-gradient {
     background: linear-gradient(to right, #A9D6A5, #228B22);
 }
-.animated-header {
+
+.animated-footer {
     background: linear-gradient(270deg, #e0f2dc, #32a852);
     background-size: 400% 400%;
     animation: gradientAnimation 30s ease infinite;

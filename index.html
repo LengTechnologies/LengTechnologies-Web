@@ -136,10 +136,10 @@
         <p class="text-center">
             Get in touch with us today!
             <br>
-            No challenge is too big or too small—we’re here to help
+            No challenge is too big or too small—we’re here to help.
         </p>
 
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="mb-4 d-flex align-items-center">
                     <i class="bi bi-envelope fs-3 text-primary me-3"></i>
@@ -149,26 +149,27 @@
                     </div>
                 </div>
                 <div class="order-md-last">
-                    <div class="p-4">
+
+                    <div class="p-4 h-100 d-flex align-items-end">
                         <img src="assets/laptop.jpg" alt="Laptop" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <form onsubmit="sendEmail(event)">
+                <form onsubmit="sendEmail(event)" id="contactForm">
                     <div class="mb-3">
                         <label class="form-label">Name</label>
-                        <input id="name" type="text" class="form-control" required/>
+                        <input id="name" type="text" class="form-control" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input id="email" type="email" class="form-control" required/>
+                        <input id="email" type="email" class="form-control" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Message</label>
                         <textarea id="message" class="form-control" rows="4" placeholder="Let us know how can we help you!" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <button type="submit" class="btn btn-primary w-100 mt-4">Send Message</button>
                 </form>
             </div>
         </div>
@@ -176,7 +177,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="animated-header text-center py-4">
+<footer class="animated-footer text-center py-4">
     <div class="container">
         <div class="row align-items-center">
             <!-- TODO add logo -->
