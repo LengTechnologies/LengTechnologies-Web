@@ -24,14 +24,16 @@
     }
 }
 
+.navbar-toggler {
+    border: none;
+}
+
 .text-primary {
     color: #32a852 !important;
 }
-
 .bg-primary {
     background-color: #32a852 !important;
 }
-
 .btn-primary {
     background-color: #32a852 !important;
     border-color: black;
@@ -50,6 +52,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* LEARN MORE TOGGLE */
 .toggle-icon {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -66,60 +69,22 @@
     transform: rotate(180deg);
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
+/* ========== DARK MODE STYLES ========== */
 
-    .card {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-        border-color: #333;
-    }
-
-    .nav-link,
-    .navbar-brand {
-        color: #f1f1f1 !important;
-    }
-
-    .btn-outline-light {
-        border-color: #aaa;
-        color: #ddd;
-    }
-
-    .btn-outline-light:hover {
-        background-color: #444;
-        color: #fff;
-    }
-
-    .bg-light,
-    section.bg-light {
-        background-color: #1c1c1c !important;
-    }
-
-    .text-black {
-        color: #ddd !important;
-    }
-
-    footer {
-        background-color: #111;
-        color: #ccc;
-    }
-}
-*/
-
-/* DARK MODE */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+/* Global Dark Theme Variables */
+[data-bs-theme="dark"] {
+    --bs-body-color: #ffffff;
 }
 
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    border-color: #333;
+/* Navbar */
+[data-bs-theme="dark"] .navbar,
+[data-bs-theme="dark"] .navbar .nav-link,
+[data-bs-theme="dark"] .navbar-brand,
+[data-bs-theme="dark"] .navbar-toggler,
+body.dark-mode .navbar,
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand {
+    color: #ffffff !important;
 }
 
 body.dark-mode .navbar,
@@ -127,11 +92,7 @@ body.dark-mode header.linear-gradient {
     background: linear-gradient(90deg, #0d0d0d 0%, #333 100%);
 }
 
-body.dark-mode .nav-link,
-body.dark-mode .navbar-brand {
-    color: #f1f1f1 !important;
-}
-
+/* Buttons */
 body.dark-mode .btn-outline-light {
     border-color: #aaa;
     color: #ddd;
@@ -142,15 +103,30 @@ body.dark-mode .btn-outline-light:hover {
     color: #fff;
 }
 
+/* Body and Backgrounds */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
 body.dark-mode .bg-light,
 body.dark-mode section.bg-light {
     background-color: #1c1c1c !important;
 }
 
+/* Cards */
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+/* Text Overrides */
 body.dark-mode .text-black {
     color: #ddd !important;
 }
 
+/* Footer */
 body.dark-mode footer {
     background-color: #111;
     color: #ccc;
