@@ -30,6 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3">Toggle Dark Mode</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -45,46 +48,148 @@
     <div class="container">
         <h2 class="text-center mb-3">Our Services</h2>
         <div class="row g-4">
+            <!-- Repeatable Card Template -->
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-display text-primary fs-1"></i>
                     <h3>Computer & IoT Support</h3>
                     <p>Hardware and software troubleshooting for desktops and laptops.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport1"
+                             aria-expanded="false"
+                             aria-controls="moreSupport1">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport1">
+                            <p class="small text-muted">
+                                OS issues, driver installs, IoT device setup, peripheral connections, and home/business networking.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-phone text-primary fs-1"></i>
                     <h3>Mobile Solutions</h3>
                     <p>Support for smartphones, tablets, and mobile devices.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport2"
+                             aria-expanded="false"
+                             aria-controls="moreSupport2">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport2">
+                            <p class="small text-muted">
+                                Assistance with iOS and Android setup, mobile app support, troubleshooting, and syncing across devices.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-hdd-network text-primary fs-1"></i>
                     <h3>Network Services</h3>
                     <p>Network setup, security, and maintenance.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport3"
+                             aria-expanded="false"
+                             aria-controls="moreSupport3">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport3">
+                            <p class="small text-muted">
+                                Router setup, Wi-Fi optimization, and network performance monitoring.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-shield-lock text-primary fs-1"></i>
                     <h3>Security Solutions</h3>
                     <p>Cybersecurity protection and data backup services.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport4"
+                             aria-expanded="false"
+                             aria-controls="moreSupport4">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport4">
+                            <p class="small text-muted">
+                                Antivirus setup, threat prevention, data recovery, encryption, password management, and backup automation.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-people text-primary fs-1"></i>
                     <h3>Business IT Support</h3>
                     <p>Comprehensive IT support for small businesses.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport5"
+                             aria-expanded="false"
+                             aria-controls="moreSupport5">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport5">
+                            <p class="small text-muted">
+                                Website design, Managed IT services, remote support, office setup, and software licensing.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card p-4 shadow h-100">
+                <div class="card p-4 shadow h-100 d-flex flex-column justify-content-between">
                     <i class="bi bi-robot text-primary fs-1"></i>
                     <h3>Automation Support</h3>
                     <p>Learn how to automate tasks and boost productivity.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-center justify-content-between toggle-icon"
+                             role="button"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#moreSupport6"
+                             aria-expanded="false"
+                             aria-controls="moreSupport6">
+                            <span class="toggle-text text-primary">Learn more</span>
+                            <i class="bi bi-chevron-down text-primary toggle-chevron"></i>
+                        </div>
+                        <div class="collapse mt-2" id="moreSupport6">
+                            <p class="small text-muted">
+                                Set up task automation using scripts, integrations, and workflow tools to save time and reduce errors.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,7 +232,7 @@
                     </div>
                     <div class="ms-3 text-start">
                         <h3>Affordable</h3>
-                        <p>We offer Smart solutions that won’t break the bank.</p>
+                        <p>We offer Smart solutions that won’t break the bank. <a href="#contact">Contact Us</a> below for a <b>Free Quote</b>!</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +271,7 @@
                         <p>Chicago, IL / Madison, WI</p>
                     </div>
                 </div>
-                <div class="order-md-last">
+                <div class="order-md-last d-none d-md-block">
                     <div class="p-4 h-100 d-flex align-items-end">
                         <img src="assets/laptop.jpg" alt="Laptop" class="img-fluid rounded">
                     </div>
@@ -217,4 +322,6 @@
 <!-- Include EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="js/email.js"></script>
+<!-- toggleIcons -->
+<script src="js/toggle.js"></script>
 </html>

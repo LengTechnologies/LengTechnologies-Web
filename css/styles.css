@@ -1,8 +1,11 @@
 @charset "UTF-8";
+
+/* Header */
 .linear-gradient {
     background: linear-gradient(to right, #A9D6A5, #228B22);
 }
 
+/* Footer */
 .animated-footer {
     background: linear-gradient(270deg, #e0f2dc, #32a852);
     background-size: 400% 400%;
@@ -38,13 +41,27 @@
     border-color: black;
 }
 
-
-/* Add hover animation for cards */
+/* Hover animation for cards */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transformation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover {
-    transform: scale(1.05); /* Enlarges the card slightly on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow effect */
+.toggle-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.toggle-icon i {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    display: inline-block;
+}
+.toggle-icon.rotate i {
+    transform: rotate(180deg);
 }
