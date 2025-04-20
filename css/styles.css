@@ -65,3 +65,93 @@
 .toggle-icon.rotate i {
     transform: rotate(180deg);
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border-color: #333;
+    }
+
+    .nav-link,
+    .navbar-brand {
+        color: #f1f1f1 !important;
+    }
+
+    .btn-outline-light {
+        border-color: #aaa;
+        color: #ddd;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #444;
+        color: #fff;
+    }
+
+    .bg-light,
+    section.bg-light {
+        background-color: #1c1c1c !important;
+    }
+
+    .text-black {
+        color: #ddd !important;
+    }
+
+    footer {
+        background-color: #111;
+        color: #ccc;
+    }
+}
+*/
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark-mode .navbar,
+body.dark-mode header.linear-gradient {
+    background: linear-gradient(90deg, #0d0d0d 0%, #333 100%);
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand {
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: #aaa;
+    color: #ddd;
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .bg-light,
+body.dark-mode section.bg-light {
+    background-color: #1c1c1c !important;
+}
+
+body.dark-mode .text-black {
+    color: #ddd !important;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+    color: #ccc;
+}
