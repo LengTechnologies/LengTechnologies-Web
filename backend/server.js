@@ -1,4 +1,3 @@
-// backend/server.js
 import express from 'express';
 import rateLimit from 'express-rate-limit';
 import cors from 'cors';
@@ -24,8 +23,7 @@ app.post('/send-email', async (req, res) => {
 
   // Verify reCAPTCHA
   const recaptchaVerifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
-  //TODO remove key
-  const secret = '6LeviywrAAAAALZO29vF5sls9qgECaFPMcyHGnsn'; //process.env.RECAPTCHA_SECRET_KEY
+  const secret = process.env.RECAPTCHA_SECRET_KEY
   const response = await fetch(recaptchaVerifyUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -38,10 +36,9 @@ app.post('/send-email', async (req, res) => {
   }
 
   const payload = {
-  //TODO remove keys
-    service_id: 'service_bv3oaan',
-    template_id: 'template_8vopdfj',
-    user_id: 'zjJhX7JUA3R7QF0_B',
+    service_id: process.env.EMAILJS_SERVICE_ID,
+    template_id: process.env.EMAILJS_TEMPLATE_ID,
+    user_id: process.env.EMAILJS_PRIVATE_KEY,
     template_params: {
       name,
       email,
