@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Collapse toggle logic (your existing code)
+export function initThemeAndCollapse() {
     document.querySelectorAll('.toggle-icon').forEach(toggle => {
         const chevron = toggle.querySelector('.toggle-chevron');
         const text = toggle.querySelector('.toggle-text');
@@ -19,12 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Theme toggle logic
     const html = document.documentElement;
     const themeToggleBtn = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
 
-    // Detect system preference on first load
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     html.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
     themeIcon.className = prefersDark ? 'bi bi-sun' : 'bi bi-moon';
@@ -35,4 +32,4 @@ document.addEventListener('DOMContentLoaded', function () {
         html.setAttribute('data-bs-theme', newTheme);
         themeIcon.className = newTheme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
     });
-});
+}
