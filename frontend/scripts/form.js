@@ -4,6 +4,7 @@ export function initFormHandlers() {
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
     const recaptchaContainer = document.getElementById("recaptcha-container");
+    const API_BASE_URL = import.meta.env.PROD ? '' : import.meta.env.LOCALHOST_API_URL;
 
     function checkFormCompletion() {
         const nameFilled = nameInput.value.trim() !== "";
@@ -30,7 +31,7 @@ export function initFormHandlers() {
         const message = messageInput.value;
 
         try {
-            const res = await fetch('http://localhost:3001/send-email', {
+            const res = await fetch('/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, message, recaptchaToken })
@@ -41,14 +42,25 @@ export function initFormHandlers() {
             if (data.success) {
                 form.reset();
                 grecaptcha.reset();
+                recaptchaContainer.style.display = "none";
                 successMessage.style.display = "block";
                 successMessage.textContent = "Your message has been sent successfully!";
                 setTimeout(() => successMessage.style.display = "none", 5000);
             } else {
-                alert("Failed to send email.");
+                console.error("Error sending email:", error);
+                successMessage.style.display = "block";
+                successMessage.textContent = "There was an error sending your message.";
+                successMessage.classList.remove("text-success");
+                successMessage.classList.add("text-danger");
+                setTimeout(() => successMessage.style.display = "none", 5000);
             }
         } catch (err) {
             console.error("Error sending email:", err);
+            successMessage.style.display = "block";
+            successMessage.textContent = "There was an error sending your message.";
+            successMessage.classList.remove("text-success");
+            successMessage.classList.add("text-danger");
+            setTimeout(() => successMessage.style.display = "none", 5000);
         }
     };
 }
