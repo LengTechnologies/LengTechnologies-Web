@@ -60,7 +60,7 @@ for title, body in personalized_policy_sections:
     pdf.chapter_body(body)
 
 # Save the PDF
-personalized_pdf_path = "/mnt/data/LengTechnologiesServiceAgreement.pdf"
+personalized_pdf_path = "./LengTechnologiesServiceAgreement.pdf"
 pdf.output(personalized_pdf_path)
 
 personalized_pdf_path
